@@ -1,0 +1,114 @@
+.navbar {
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.nav-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(100deg, #2a0f57 0%, #3a1573 55%, #2f0f62 100%);
+  border: 1px solid rgba(230, 204, 255, 0.45);
+  border-radius: 14px;
+  padding: 8px 18px;
+  box-shadow: 0 8px 20px rgba(28, 9, 58, 0.28);
+  line-height: 1;
+  user-select: none;
+}
+
+.nav-brand-main {
+  color: #efe9ff;
+  letter-spacing: 0.24em;
+  font-weight: 800;
+  font-size: 21px;
+  text-transform: uppercase;
+  font-family: "Cinzel", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  text-shadow: 0 2px 8px rgba(18, 6, 39, 0.4);
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.brand-core {
+  color: #e7defa;
+}
+
+.brand-letter-m {
+  position: relative;
+  color: transparent;
+  background: linear-gradient(165deg, #f6d775, #f1b84b 55%, #c7862f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-right: 0.03em;
+}
+
+.brand-letter-m::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  top: 8%;
+  width: 66%;
+  height: 84%;
+  background:
+    repeating-linear-gradient(
+      -30deg,
+      rgba(255, 224, 140, 0.95) 0,
+      rgba(255, 224, 140, 0.95) 1px,
+      rgba(188, 132, 47, 0.95) 1px,
+      rgba(188, 132, 47, 0.95) 2px
+    );
+  mix-blend-mode: screen;
+  opacity: 0.75;
+  clip-path: polygon(0 0, 36% 0, 100% 100%, 64% 100%);
+  pointer-events: none;
+}
+
+.brand-letter-e {
+  position: relative;
+  color: #d39f6c;
+  margin-right: 0.01em;
+}
+
+.brand-letter-e::after {
+  content: "";
+  position: absolute;
+  right: -0.32em;
+  top: 52%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 0.12em solid transparent;
+  border-bottom: 0.12em solid transparent;
+  border-left: 0.3em solid #b87742;
+}
+
+.nav-brand-sub {
+  margin-top: 5px;
+  color: rgba(224, 179, 129, 0.9);
+  letter-spacing: 0.08em;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .nav-brand-main {
+    font-size: 18px;
+    letter-spacing: 0.18em;
+  }
+
+  .nav-brand-sub {
+    font-size: 9px;
+    letter-spacing: 0.06em;
+  }
+}
